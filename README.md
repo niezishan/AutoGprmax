@@ -1,3 +1,5 @@
+
+
 # AutoGprmax User Guide
 
 ## Basic Overview
@@ -77,7 +79,7 @@ The parameters you need to configure are stored in the `config.py` file. You onl
 ```python
 AIR_CAVITY_NUM : (int)
 WATER_CAVITY_NUM : (int)
-GENERATE_MODE : (string)
+GENGERATE_MODE : (string)
 ASCAN_TIMES : (int)
 TIME_WINDOW : (float)
 DX : (float)
@@ -111,7 +113,7 @@ TEXT_INTACT_ROAD = ("#domain: 4.00 1.40 0.0025\n"
                 "#box: 0.00 1.15 0.00 4.00 1.30 0.0025 asphalt\n"
                 "#box: 0.00 1.30 0.00 4.00 1.40 0.0025 free_space\n")
 
-GENERATE_MODE = 'scan'
+GENGERATE_MODE = 'scan'
 TIME_WINDOW = 32e-9
 DX = 0.0025
 DY = 0.0025
@@ -159,10 +161,10 @@ Before running AutoGprmax, it is essential to specify the number of A-scan lines
 ASCAN_TIMES = 120
 ```
 
-After setting the number of A-scan lines for a single image in AutoGprmax, the next step is to specify the generation mode. AutoGprmax supports three operational modes, which can be modified through the `GENERATE_MODE` parameter:
+After setting the number of A-scan lines for a single image in AutoGprmax, the next step is to specify the generation mode. AutoGprmax supports three operational modes, which can be modified through the `GENGERATE_MODE` parameter:
 
 ```python
-GENERATE_MODE = 'scan'
+GENGERATE_MODE = 'scan'
 ```
 
 - 'geo' mode is only used to verify that the holes you have generated are correct. Each run will generate a `*.vti` file called `basic.vti` that you can open and inspect with ParaView.
